@@ -13,7 +13,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://reacthariom-default-rtdb.firebaseio.com/movies.json');
+      const response = await fetch('https://new-project-d0561-default-rtdb.europe-west1.firebasedatabase.app/movies.json');
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
@@ -43,7 +43,7 @@ function App() {
   }, [fetchMoviesHandler]);
 
   async function addMovieHandler(movie) {
-    const response=await fetch('https://reacthariom-default-rtdb.firebaseio.com/movies.json',{
+    const response=await fetch('https://new-project-d0561-default-rtdb.europe-west1.firebasedatabase.app/movies.json',{
       method:'Post',
       body:JSON.stringify(movie),
       headers:{
