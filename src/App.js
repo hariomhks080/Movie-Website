@@ -16,6 +16,8 @@ function App() {
       const response = await fetch('https://new-project-d0561-default-rtdb.europe-west1.firebasedatabase.app/movies.json');
       if (!response.ok) {
         throw new Error('Something went wrong!');
+      }else{
+        alert("movie added sucessfully")
       }
 
       const data = await response.json();
